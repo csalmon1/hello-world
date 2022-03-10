@@ -26,7 +26,7 @@ jobs:
       - run:
           name: "Say hello and store my artifacts"
           command: |
-            "echo Hello, World!"
+            echo "Hello, World! Try some artifacts"
             echo "my artifact file" > artifact-1;
             mkdir /artifacts;
             echo "my artifact files in a dir" > /artifacts/artifact-2;
