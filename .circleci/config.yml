@@ -25,9 +25,11 @@ jobs:
             echo "Hello, World! Try some artifacts"
             echo "my fresh artifact file in a dir" > artifact-2;
             pwd
-            git add --force artifact-2
-            git commit --force -m "fresh artifact"
-            git push --force origin circleci-project-setup
+            git config --global url."ssh://git@github.com".insteadOf "https://github.com" || true
+            git config --global gc.auto 0 || true
+            git add artifact-2
+            git commit -m "fresh artifact"
+            git push origin circleci-project-setup
 
 #      - store_artifacts:
 #          path: /tmp/artifact-1
