@@ -23,11 +23,9 @@ jobs:
           name: "Say hello and store my artifacts"
           command: |
             echo "Hello, World! Try some artifacts"
-            mkdir /art;
-            mkdir /artStore;
-            echo "my artifact file in a dir" > /art/artifact-2;
+            echo "my fresh artifact file in a dir" > artifact-2;
             pwd
-            git add /art/artifact-2
+            git add artifact-2
             git commit -m "fresh artifact"
             git push origin circleci-project-setup
 
@@ -36,7 +34,7 @@ jobs:
 #          destination: artifact-file
 
       - store_artifacts:
-          path: /artStore
+          path: artifact-2
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
