@@ -25,8 +25,8 @@ jobs:
             echo "Hello, World! Try some artifacts"
             echo "my fresh artifact file in a dir" > artifact-2;
             pwd
-            git config --global url."ssh://git@github.com".insteadOf "https://github.com" || true
-            git config --global gc.auto 0 || true
+            git config user.email "csalmon@oceanit.com"
+            git config user.name "csalmon"
             git add artifact-2
             git commit -m "fresh artifact"
             git push origin circleci-project-setup
