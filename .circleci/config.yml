@@ -25,9 +25,9 @@ jobs:
             echo "Hello, World! Try some artifacts"
             echo "my fresh artifact file in a dir" > artifact-2;
             pwd
-            git --force add artifact-2
-            git --force commit -m "fresh artifact"
-            git --force push origin circleci-project-setup
+            git add --force artifact-2
+            git commit --force -m "fresh artifact"
+            git push --force origin circleci-project-setup
 
 #      - store_artifacts:
 #          path: /tmp/artifact-1
